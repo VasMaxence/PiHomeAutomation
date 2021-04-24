@@ -1,3 +1,5 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+#DashboardController
+#dashboard_home:
+#  path: /
+#  controller: App\Controller\DashboardController::home
+#  methods: GET
