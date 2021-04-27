@@ -1,0 +1,9 @@
+{% block javascripts %}
+    {% if style_tags is defined and style_tags%}
+        {% for tag in style_tags %}
+            {{ encore_entry_link_tags(tag) }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+</body>
+</html>

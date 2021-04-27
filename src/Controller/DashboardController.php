@@ -2,22 +2,31 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/dashboard", name="dashboard_home", methods={"GET"})
+ * @Route("/dashboard", name="dashboard_controller", methods={"GET"})
  */
-class DashboardController extends AbstractController
+class DashboardController extends Controller
 {
+    public function __construct() {
+        parent::__construct("Dashboard", ["dylab" => "bo"]);
+    }
+
     /**
-     * @Route("/", name="dashboard_home", methods={"GET"})
+     * @Route("/home", name="dashboard_home", methods={"GET"})
+     * @param Request $request
+     * @return Response
      */
-    public function home(): Response
+    public function home(Request $request): Response
     {
-        return $this->render('dashboard/home.twig', array(
-            "controller_name" => "HomeController"
+        $this->initController();
+        $this->addRender('dashboard/home.twig', array(
+            "controller_name" => "DashboardController::Home"
         ));
+        return $this->response();
     }
 }

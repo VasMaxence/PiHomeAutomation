@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% if page_title is defined %}
+            {{ page_title }}
+        {% else %}
+            PiHome Automation
+        {% endif %}
+    </title>
+    {{ encore_entry_link_tags('default') }}
+    {% block stylesheets %}
+        {% if style_tags is defined and style_tags%}
+            {% for tag in style_tags %}
+                {{ encore_entry_link_tags(tag) }}
+            {% endfor %}
+        {% endif %}
+    {% endblock %}
+</head>
+<body>
