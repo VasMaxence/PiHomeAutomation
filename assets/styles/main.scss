@@ -1,0 +1,171 @@
+@import "config";
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("/assets/font/BebasNeue-Regular.ttf");
+}
+
+html, body {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.btn-validate {
+  color: #fff;
+  background-color: $button;
+  border-color: $buttonBorder;
+}
+
+.btn-validate:hover {
+  color: #fff;
+  background-color: $buttonHover;
+  border-color: $buttonBorder;
+}
+
+.btn-validate:focus, .btn-validate.focus {
+  box-shadow: 0 0 0 0.2rem rgba(163, 163, 163, 0.5);
+}
+
+.btn-validate.disabled, .btn-validate:disabled {
+  color: #fff;
+  background-color: $buttonDisabled;
+  border-color: $buttonBorderDeactivate;
+}
+
+.btn-validate:not(:disabled):not(.disabled):active, .btn-validate:not(:disabled):not(.disabled).active,
+.show > .btn-validate.dropdown-toggle {
+  color: #fff;
+  background-color: $button;
+  border-color: $buttonBorder;
+}
+
+.btn-validate:not(:disabled):not(.disabled):active:focus, .btn-validate:not(:disabled):not(.disabled).active:focus,
+.show > .btn-validate.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(163, 163, 163, 0.5);
+}
+
+/**
+ * Security Controller SCSS
+ */
+
+.login {
+  height: 100vh;
+  overflow: auto;
+  background: rgba(125, 128, 252, .75);
+
+  .login-banner {
+    display: block;
+    position: relative;
+    left: -40px;
+    top: calc(40vh - 75px);
+    background: rgba(255, 255, 255, .57);
+    padding: 75px 40px;
+
+    span {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 50px;
+      font-family: "BebasNeue", sans-serif;
+      font-weight: bold;
+    }
+  }
+
+  .login-connection {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: $white;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-left: solid $lightGray 2px;
+
+    span {
+      position: relative;
+      top: -15px;
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-family: "BebasNeue", sans-serif;
+      font-weight: bold;
+    }
+
+    .login-form {
+      position: relative;
+      top: 10vh;
+      left: 0;
+      height: 80vh;
+
+      form {
+        input[type=checkbox] {
+
+        }
+
+        label[for*="_remember_me"] {
+          padding-left: 5px;
+        }
+
+        input[type=email], input[type=password], input[type=text], input[type=date] {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: transparent;
+          border: none;
+          border-bottom: solid $darkGray 1px;
+          border-bottom-left-radius: 10px;
+          padding: 5px 10px;
+          z-index: 1;
+          outline: 0;
+          transition: .5s;
+
+          &:focus {
+            border-color: $lightGray;
+          }
+        }
+
+        label[for*="email"], label[for*="password"] {
+          position: relative;
+          text-transform: capitalize;
+          left: 5px;
+        }
+
+        .login-button {
+          width: 100%;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}
+
+form.modern-form {
+  .modern-input {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .login {
+    .login-responsive-none {
+      display: none;
+    }
+  }
+}
