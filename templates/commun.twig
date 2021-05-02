@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset("dependencies/bootstrap-4/css/bootstrap.css") }}">
+    {{ encore_entry_link_tags('default') }}
+    {% block stylesheets %}
+    {% endblock %}
+
+    <script type="application/javascript" src="{{ asset("dependencies/jquery/jquery.min.js") }}"></script>
+    <script type="application/javascript" src="{{ asset("dependencies/bootstrap-4/js/bootstrap.js") }}"></script>
+    {% block javascripts %}
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+{% endblock %}
+
+{% block end_javascript %}
+{% endblock %}
+</body>
+</html>

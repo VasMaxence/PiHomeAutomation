@@ -1,4 +1,9 @@
 #DashboardController
+home:
+  path: /
+  controller: App\Controller\DashboardController::home
+  methods: GET
+
 dashboard:
   path: /dashboard
   controller: App\Controller\DashboardController::home
