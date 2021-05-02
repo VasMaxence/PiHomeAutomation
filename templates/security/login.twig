@@ -1,0 +1,59 @@
+{% extends "commun.twig" %}
+
+{% block title %}PhA - Connexion{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row login">
+            <div class="col-md-5 justify-content-center login-responsive-none" style="height: 100vh">
+                <div class="row">
+                    <div class="offset-md-3 col-md-6 login-banner">
+                        <span>{% trans into lang %}login.visual_span{% endtrans %}</span>
+                        <h3>{% trans into lang %}login.visual_keyword{% endtrans %}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="login-connection">
+                    <div class="login-form">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <img src="{{ asset("/images/logo-login.png") }}" alt="logo-pha">
+                                <h2>{% trans into lang %}login.login_span{% endtrans %}</h2>
+                                <span>{% trans into lang %}login.login_keyword{% endtrans %}</span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <form method="post" class="modern-form">
+                                    <div class="modern-input">
+                                        <label for="email">{% trans into lang %}utils.email{% endtrans %}:</label>
+                                        <input type="email" name="email" id="email" required>
+                                    </div>
+                                    <div class="modern-input">
+                                        <label for="password">{% trans into lang %}utils.password{% endtrans %}:</label>
+                                        <input type="password" name="password" id="password" required>
+                                    </div>
+                                    <div class="modern-input">
+                                        <input type="checkbox" id="_remember_me" name="_remember_me">
+                                        <label for="_remember_me">{% trans into lang %}utils.remember_me{% endtrans %}</label>
+                                    </div>
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token('login_form') }}">
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-8">
+                                            <div class="modern-input">
+                                                <button class="login-button btn btn-primary" type="submit">{% trans into lang %}login.button{% endtrans %}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

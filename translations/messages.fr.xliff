@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <group id="utils">
+                <trans-unit id="5">
+                    <source>utils.email</source>
+                    <target>Email</target>
+                </trans-unit>
+                <trans-unit id="6">
+                    <source>utils.password</source>
+                    <target>Mot de passe</target>
+                </trans-unit>
+                <trans-unit id="7">
+                    <source>utils.remember_me</source>
+                    <target>Se souvenir de moi</target>
+                </trans-unit>
+            </group>
+            <group id="login">
+                <trans-unit id="1">
+                    <source>login.visual_span</source>
+                    <target>La connectivité de votre maison</target>
+                </trans-unit>
+                <trans-unit id="2">
+                    <source>login.visual_keyword</source>
+                    <target>À porter de main</target>
+                </trans-unit>
+                <trans-unit id="3">
+                    <source>login.login_span</source>
+                    <target>Connexion</target>
+                </trans-unit>
+                <trans-unit id="4">
+                    <source>login.login_keyword</source>
+                    <target>Heureux de vous revoir</target>
+                </trans-unit>
+                <trans-unit id="8">
+                    <source>login.button</source>
+                    <target>Connexion</target>
+                </trans-unit>
+            </group>
+        </body>
+    </file>
+</xliff>
