@@ -86,11 +86,13 @@ img {
     position: relative;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
+    overflow: auto;
     background: $white;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     border-left: solid $lightGray 2px;
+    margin-bottom: 40px;
 
     span {
       position: relative;
@@ -162,10 +164,25 @@ form.modern-form {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1360px) {
   .login {
     .login-responsive-none {
       display: none;
+    }
+
+    .login-connection {
+      border-radius: 0;
+      border: none;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .login {
+    .login-connection {
+      .login-form {
+        margin: 40px 40px;
+      }
     }
   }
 }
