@@ -8,6 +8,8 @@
     {{ encore_entry_link_tags('default') }}
     {% block stylesheets %}
     {% endblock %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+          integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
     <script type="application/javascript" src="{{ asset("dependencies/jquery/jquery.min.js") }}"></script>
     <script type="application/javascript" src="{{ asset("dependencies/bootstrap-4/js/bootstrap.js") }}"></script>
@@ -15,10 +17,91 @@
     {% endblock %}
 </head>
 <body>
-{% block body %}
-{% endblock %}
+<div class="container-fluid">
+    {% if app.user and dashboard is defined %}
+    <div class="dashboard">
+        <header>
+            <div class="link-logo">
+                <a href="#">YEST</a>
+            </div>
+            <div class="link-utils">
+                <div class="button-menu responsive-small">
+                    <span><i class="fas fa-bars"></i></span>
+                </div>
+                <div class="button-menu responsive-high">
+                    <a href="/dashboard/message">
+                        {% trans into lang %}dashboard.message{% endtrans %}
+                    </a>
+                </div>
+                <div class="button-menu responsive-high" isMenu>
+                    <a href="/account">{% trans into lang %}dashboard.account{% endtrans %}</a>
+                    <div class="navigation-under-menu">
+                        <a href="#">test</a>
+                        <a href="#">test</a>
+                        <a href="#">test</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <nav>
+                {% if menu is defined %}
+                    {% for item in menu %}
+                        <div class="nav-box {% if item.isActive %}nav-active{% endif %}">
+                            {% if item.isTitle %}
+                                <div class="nav-section">
+                                    <label class="nav-title">
+                                        {{ item.titleMenu|trans([], null, lang) }}
+                                    </label>
+                                </div>
+                            {% else %}
+                                <div class="nav-section">
+                                    <div class="button-menu" {% if item.isMenu %}isMenu{% endif %}>
+                                        <a href="{{ item.url }}" class="{{ item.class }}">
+                                            <i class="{{ item.icon }}"></i>
+                                            {{ item.titleMenu|trans([], null, lang) }}
+                                        </a>
+                                        {% if item.isMenu %}
+                                            <div class="navigation-under-menu">
+                                                {% for child in item.children %}
+                                                    <a href="{{ child.url }}" class="{{ child.class }}">
+                                                        {{ child.titleMenu|trans([], null, lang) }}
+                                                    </a>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </nav>
+            <div class="main-content">
+                {% endif %}
+                {% block body %}{% endblock %}
+                {% if app.user and dashboard is defined %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 
 {% block end_javascript %}
 {% endblock %}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".button-menu").hover(function () {
+            if ($(this).prop("isMenu", true)) {
+                $(this).children('.navigation-under-menu').css("display", "block");
+            }
+        }, function () {
+            if ($(this).prop("isMenu", true)) {
+                $(this).children('.navigation-under-menu').css("display", "none");
+            }
+        })
+    });
+</script>
 </body>
 </html>

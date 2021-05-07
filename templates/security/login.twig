@@ -3,6 +3,7 @@
 {% block title %}PhA - Connexion{% endblock %}
 
 {% block body %}
+    {{ parent() }}
     <div class="container-fluid">
         <div class="row login">
             <div class="col-md-5 justify-content-center login-responsive-none" style="height: 100vh">
@@ -39,7 +40,6 @@
                                         <label for="_remember_me">{% trans into lang %}utils.remember_me{% endtrans %}</label>
                                     </div>
                                     <input type="hidden" name="csrf_token" value="{{ csrf_token('login_form') }}">
-
                                     <div class="row justify-content-center">
                                         <div class="col-8">
                                             <div class="modern-input">

@@ -55,6 +55,11 @@ class User extends UserBadge implements UserInterface
      */
     private $createdDate;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $language;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +92,11 @@ class User extends UserBadge implements UserInterface
     public function getPassword(): ?string
     {
         return $this->password;
+    }
+
+    public function getLanguage(): ?string
+    {
+        return $this->language;
     }
 
     public function setPassword(string $password): self
@@ -140,6 +150,13 @@ class User extends UserBadge implements UserInterface
     public function setCreatedDate(?\DateTimeInterface $createdDate): self
     {
         $this->createdDate = $createdDate;
+
+        return $this;
+    }
+
+    public function setLanguage(?string $language): self
+    {
+        $this->language = $language;
 
         return $this;
     }

@@ -1,0 +1,93 @@
+<div class="navigation">
+    <div class="navigation-top">
+        <a href="/dashboard/home" class="navigation-home">
+            <img src="/images/logo-login.png" alt="Logo-PhA">
+        </a>
+        <div class="navigation-top-utils">
+            <div class="navigation-menu-button">
+                <span class="navigation-menu-button-close"><i class="fas fa-times"></i></span>
+                <span class="navigation-menu-button-open"><i class="fas fa-bars"></i></span>
+            </div>
+            <div class="navigation-utils">
+                <div id="navigation-notification" class="navigation-notification">
+                    <a href="/dashboard/notification" class="notification-active"><i class="fas fa-bell"></i></a>
+                    <span>5</span>
+                </div>
+                <a href="/account/user"><i class="fas fa-user-circle"></i></a>
+                <a href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="navigation-top-bar">
+        <div class="navigation-home">
+            <a href="/dashboard/home">
+                <div class="navigation-home-title">
+                    Home Title
+                </div>
+            </a>
+        </div>
+        <div class="navigation-top-bar-menu">
+            <span onclick="alert('TEST')"><i class="fas fa-bars"></i></span>
+        </div>
+    </div>
+    <a href="/logout">
+        <div class="navigation-box">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="name">ds</span>
+        </div>
+    </a>
+    <a href="/logout">
+        <div class="navigation-box">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="name">ds</span>
+        </div>
+    </a>
+    <a href="/logout">
+        <div class="navigation-box">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="name">test de nom</span>
+        </div>
+    </a>
+    <div class="navigation-box">
+        <span>Test deroulant</span>
+        <div class="navigation-downbar">
+            <a href="/logout">
+                <div class="navigation-downbox">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="name">ds</span>
+                </div>
+            </a>
+            <a href="/logout">
+                <div class="navigation-dowbox">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="name">ds</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <a href="/logout">
+        <div class="navigation-box">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="name">ds</span>
+        </div>
+    </a>
+    -->
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".navigation-menu-button-close").on('click', function () {
+            $(".navigation-home").css("width", "6%");
+            $(".navigation-menu-button-close").css("display", "none");
+            $(".navigation-menu-button-open").css("display", "block");
+            $(".navigation-top-utils").css("width", "94%");
+        });
+        $(".navigation-menu-button-open").on('click', function () {
+            $(".navigation-home").css("width", "15%");
+            $(".navigation-menu-button-open").css("display", "none");
+            $(".navigation-menu-button-close").css("display", "block");
+            $(".navigation-top-utils").css("width", "85%");
+        });
+    });
+</script>

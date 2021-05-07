@@ -16,6 +16,40 @@
                     <target>Remember me</target>
                 </trans-unit>
             </group>
+            <group id="menu">
+                <trans-unit id="11">
+                    <source>nav.menu.home</source>
+                    <target>Homepage</target>
+                </trans-unit>
+                <trans-unit id="12">
+                    <source>nav.menu.list</source>
+                    <target>Widget list</target>
+                </trans-unit>
+                <trans-unit id="13">
+                    <source>nav.settings</source>
+                    <target>Settings</target>
+                </trans-unit>
+                <trans-unit id="14">
+                    <source>nav.title.navigation</source>
+                    <target>Navigation</target>
+                </trans-unit>
+                <trans-unit id="15">
+                    <source>nav.title.settings</source>
+                    <target>Settings</target>
+                </trans-unit>
+                <trans-unit id="16">
+                    <source>nav.api</source>
+                    <target>API</target>
+                </trans-unit>
+                <trans-unit id="17">
+                    <source>nav.api.list</source>
+                    <target>API's list</target>
+                </trans-unit>
+                <trans-unit id="18">
+                    <source>nav.api.add</source>
+                    <target>New api</target>
+                </trans-unit>
+            </group>
             <group id="login">
                 <trans-unit id="1">
                     <source>login.visual_span</source>
@@ -37,6 +71,16 @@
                     <source>login.button</source>
                     <target>Connection</target>
                 </trans-unit>
+                <group id="dashboard">
+                    <trans-unit id="9">
+                        <source>dashboard.message</source>
+                        <target>Message</target>
+                    </trans-unit>
+                    <trans-unit id="10">
+                        <source>dashboard.account</source>
+                        <target>Account</target>
+                    </trans-unit>
+                </group>
             </group>
         </body>
     </file>

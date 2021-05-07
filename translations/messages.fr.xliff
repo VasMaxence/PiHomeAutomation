@@ -16,6 +16,40 @@
                     <target>Se souvenir de moi</target>
                 </trans-unit>
             </group>
+            <group id="menu">
+                <trans-unit id="11">
+                    <source>nav.menu.home</source>
+                    <target>Acceuil</target>
+                </trans-unit>
+                <trans-unit id="12">
+                    <source>nav.menu.list</source>
+                    <target>Liste des widgets</target>
+                </trans-unit>
+                <trans-unit id="13">
+                    <source>nav.settings</source>
+                    <target>Paramètres</target>
+                </trans-unit>
+                <trans-unit id="14">
+                    <source>nav.title.navigation</source>
+                    <target>Navigation</target>
+                </trans-unit>
+                <trans-unit id="15">
+                    <source>nav.title.settings</source>
+                    <target>Paramètres</target>
+                </trans-unit>
+                <trans-unit id="16">
+                    <source>nav.api</source>
+                    <target>API</target>
+                </trans-unit>
+                <trans-unit id="17">
+                    <source>nav.api.list</source>
+                    <target>Liste des APIs</target>
+                </trans-unit>
+                <trans-unit id="18">
+                    <source>nav.api.add</source>
+                    <target>Nouvelle api</target>
+                </trans-unit>
+            </group>
             <group id="login">
                 <trans-unit id="1">
                     <source>login.visual_span</source>
@@ -36,6 +70,16 @@
                 <trans-unit id="8">
                     <source>login.button</source>
                     <target>Connexion</target>
+                </trans-unit>
+            </group>
+            <group id="dashboard">
+                <trans-unit id="9">
+                    <source>dashboard.message</source>
+                    <target>Messages</target>
+                </trans-unit>
+                <trans-unit id="10">
+                    <source>dashboard.account</source>
+                    <target>Mon compte</target>
                 </trans-unit>
             </group>
         </body>
